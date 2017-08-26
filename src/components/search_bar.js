@@ -1,14 +1,20 @@
 import React, { Component } from 'react';
 
 export default class SearchBar extends Component {
-	render() {
-		return (
-			<input formEncType="text" onChange={this.onInputChange} />
-		);
+	constructor(props) {
+		super(props);
+
+		this.state = { term: ''};
 	}
 
-	onInputChange(event) {
-		console.log(event.target.value);
+
+	render() {
+		return (
+			<div>
+				<input formEncType="text" onChange={(event) => this.setState({ term: event.target.value }) } />
+				Value of input: { this.state.term }
+				</div>
+		);
 	}
 
 }
