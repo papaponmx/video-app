@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
 
-export default class searchBar extends Component {
+export default class SearchBar extends Component {
 	render() {
 		return (
-			<div>
-				
-			</div>
+			<input formEncType="text" onChange={this.onInputChange} />
 		);
 	}
+
+	onInputChange(event) {
+		console.log(event.target.value);
+	}
+
 }
