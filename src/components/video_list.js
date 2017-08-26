@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 
-export default class videoList extends Component {
+export default class VideoList extends Component {
 	render() {
 		return (
-			<div>
-				
-			</div>
+			<ul className="col-md-4 list-group">
+				{this.props.videos.length}
+			</ul>
 		);
 	}
 }
