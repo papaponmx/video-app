@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
 
-export default class videoListItem extends Component {
+export default class VideoListItem extends Component {
 	render() {
 		return (
-			<div>
-				
-			</div>
+			<li>Video</li>
 		);
 	}
 }
