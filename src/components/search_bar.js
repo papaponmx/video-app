@@ -12,9 +12,14 @@ export default class SearchBar extends Component {
 		return (
 			<div className="search-bar">
 				<input 
-				formEncType="text" onChange={(event) => this.setState({ term: event.target.value }) } />
+				formEncType="text" onChange={ event => this.onInputChange(event.target.value) } />
 				</div>
 		);
+	}
+
+	onInputChange(term) {
+		this.setState({term});
+		this.props.onSearchTermChange(term);
 	}
 
 }
