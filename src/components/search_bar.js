@@ -10,7 +10,7 @@ export default class SearchBar extends Component {
 
 	render() {
 		return (
-			<div>
+			<div className="search-bar">
 				<input 
 				formEncType="text" onChange={(event) => this.setState({ term: event.target.value }) } />
 				</div>
